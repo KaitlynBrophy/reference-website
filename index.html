@@ -7,6 +7,198 @@
   <title>Web Design 1 Reference Site</title>
 </head>
 <body>
+  <h1>Hypertext markup language</h1>
+   Create a paragraph using <p></p>
+   Headings go from 1 to 6, in an order from most to least importance
+   <h1>Most important</h1><h2></h2><h3></h3><h4></h4><h5></h5><h6>Least important</h6>
+   Lists are often used and come in different forms
+   <ul> unordered list, no order required
+    <li> list item
+  <ol> order list
+    <li>
+  <dl> description list
+    <dt> term or name
+    <dd> description of term
+    <dd> description of term
+<!--dl can have more than one dd, but just one dt.
+Order matters-->
+<q> used to mark up quotes embedded in other elements like a paragraph
+  <blockquote> for large stand alone quotes (decorative, larger, pull quote)
+  <cite> marking the source of the quote
+   <h2>Phrasing elements</h2>
+   <em> emphasis 
+    <strong> lots of emphasis, importance, urgency
+       <i> another language, technical term, title,   visual only italics
+       <b> a keyword
+    
+    <a href=“”> link text </a>
+    The opening <a> tells where the link starts and the closing </a> is where the link ends. 
+    Use the <a> tag and href for hyperlink 
+    
+    <img src=“” alt=“” /> 
+    Images in websites that are not embedded in the website, but linked to the HTML document.
+    Images need two attributes: the location of the image and alternative content.
+    Alt- alternative text, description of image
+    
+<!--Nesting is when something is within another element-->    
+
+<h2>Generic elements</h2>
+<!--HTML elements should always be chosen to give meaning to your content, but sometimes we need an element that is meaningless
+-->
+<div> blocked element used to group elements together
+
+  <span> an inline container used to mark up a part of text, or a part of a document.
+  -wrap around text, bole etc
   
+  HTML attributes- extra pieces of information in the opening tag to make something work, or give more info to use elsewhere
+  <a href=“”> link </a>
+  
+  <p class=“”>
+  You can use a class multiple times throughout your HTML and attach it to different types of elements
+  
+  <p id="">
+  Only allowed to use one unique id once in each HTML page, can only be used once per elements ex: <p id”about me”>
+<h2>Structuring content</h2>
+<!--Organizing our HTML elements content within typical regions of a web page. 
+-->
+<header> </header>
+Main focus at the top
+
+<footer> </footer>
+Extra info at the bottom
+
+<main> </main>
+Only used once, wraps around the main content of the page
+
+<section> </section>
+Wrapped around related pieces of content, usually has its own heading 
+
+<article> </article> 
+Self contained composition of the web page, intended to be independently distributable ex: blog post, widget, product card
+
+<nav> </nav>
+Unordered list usually, the nav element represents a section of a page whos purpose is to provide a navigation link, either within the current document or to other documents
+
+Parent-Child nests
+<nav> <ul> <li>
+
+<aside> </aside>
+This content will frequently be presented as a sidebar in a website. Related sources/info. Indirectly related to the documents main content
+
+<section>
+Absolute url: 
+
+<a href=“website address”> This link goes to another url</a>
+
+<img src=“website image address” alt=“description”>
+
+Relative url: 
+Relative file path points to a file relative to the current page
+
+<a href=“about.html”> page in same folder as index.html</a>
+
+<img src=“images/images.jpg”alt=“description”/>
+
+
+</section>
+
+<h2>Web accessibility</h2>
+Websites must comply with web content accessibility guidelines (WCAG 2.0)
+
+WCAG Principles:
+Perceivable
+Operable
+Understandable
+Robust
+
+Perceivable- Content must be presented to user in a way they can discern, regardless of which senses they do or do not have
+
+Operable- Users must be able to find, navigate and interact with web content in multiple ways
+
+Understandable- The content must be understandable to its users
+
+Robust- The site must be developed using well-adopted web standards that will work across all browsers and assistive technologies.
+Consistent
+
+
+Visual impairments
+-Allow text to be resized
+-Have good contrast in colours
+-Test for colour blindness related issues
+-Website must work well with screen readers
+-Use proper alt attributes
+
+
+Mobility/dexterity impairments
+-Recongnize and prepare for the fact that not everybody will use a mouse
+-Make the website keyboard accessible- make sure you are giving users alternate ways to access your information
+-Increase hit areas of links and buttons
+
+
+Auditory impairments
+-Provide text captions and subtitles- when including audio or video on your website
+-Users may need closed captions while viewing your video in a noisy room or the language you’ve provided may not be their first one
+
+
+Cognitive impairments
+-Make it clear where in the website the user is
+-Organize your content correctly
+-Make the text easily scannable
+-Clearly mark links
+-Use plain, simple language
+
+
+Additional
+-Choose HTML tags wisely- semantic HTML, provide extra info that helps people use our website
+-Logical order- Keep your code & your content in your HTML documents in the order you expect them to be read
+-Headings- Break up your content using headings tags. They’re nice visual breaks, but screen readers use them as jumping points
+
+
+WAI-ARIA
+Web Accessibility Initiative (WAI) has a specification called Accessible Rich Internet Application (ARIA)
+
+Landmark roles
+ARIA has a set of landmark roles to help those using screen readers to jump directly to specific sections within our sites
+
+
+<header role=“banner”>
+This role is for defining an element as  the masthead, added to the primary <header>
+For primary header
+
+<nav role=“navigation”>
+This role is for defining an element as the primary navigation, added to the top <nav>
+Main nav always in the header that has links to important web pages etc on your site
+
+<main role=“main”>
+This role is for defining an element as being the main content of the page, added to the <main>
+
+<aside role=“complimentary”>
+This role is for defining an elements as being content related to the primary content, usually added to an <aside>
+
+<footer role=“contentinfo”>
+This role is for defining an element as information about the content: ex: copyright, terms, privacy policy, usually added to a <footer>
+
+
+Labeling links
+Adding ARIA label attribute provides the user with a non-visual label that will only be announced by a screen reader
+
+<a href=“#” aria-label=“description of what the user will click through to would go here”> Read more</a>
+</article>
+
+
+Image descriptions
+Always describe your images with the alt attribute. If purely decorative you can leave it empty and apply role=“presentation”
+
+<p>The alt attribute has two purposes:
+-To describe the photo if it doesn’t download
+-To describe the photo to someone who cannot see the image, maybe a screen reader user</p>
+
+Skip links
+-Skip links are placed at the top of your page and offer users a way to jump t specific areas of the page
+
+<nav role=“navigation” id=“nav”></nav>
+<nav role=“main” id=“main></main>
+
+
 </body>
 </html>
