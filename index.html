@@ -1,14 +1,122 @@
+<header>
+  <h1> Reference Website</h1>
+   <nav>
+    <ul>
+      <li><a href="#naming-conventions">Naming conventions</a></li>
+      <li><a href="#commit-messages">Commit messages</a></li>
+      <li><a href="#html-elements">HTML elements</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<main>
+  <section id="naming-conventions">
+    <h2>Naming Conventions</h2>
+  </section>
+
+  <p>Lowercase is common and is cleaner, usually uppercase is avoided. Special characters, spaces and long anmes should be avoided as well.</p>
+
+<section id="commit-messages">
+  <h2>Commit messages</h2>
+</section>
+
+<p>When you name a commit, explain why you have done something.Clear and meaningful is key.</p>
+
+<section id="html-elements">
+  <h2>HTML elements</h2>
+</section>
+
+<ol>I am a list</ol>
+<ol>an ordered list</ol>
+
+<li>I am a list</li>
+<li>with list items</li>
+
+<ul>I am a list</ul>
+<ul>with no order</ul>
+
+<h2>I am a heading, I go from h1 to h6</h2>
+
+<figure>I am a figure, self contained content like diagrams, photos etc</figure>
+
+<q>I am a quote, the browser usually adds my marks</q>
+<blockquote>While I am a blockquote, usually used for longer text and quoted from another source. Section within a doc.</blockquote>
+<cite>I am a cite tag, used for title of works</cite>
+
+<p>this is using a paragraph tag</p>
+<small> This is using small tag, usually for footer</small>
+<strong>This is using strong tag</strong>
+<em>I am em tag, used to emphasize text</em>
+<b>I am a b tag, for text bold</b>
+<i>I am an i tag, used for italic</i>
+
+<header>I am a header, for the top of the page</header>
+<main>I am a main tag, used for the main content on a page</main>
+<section>I am a section, and can be id</section>
+<article>I am an article, I am self contained and independently distributed</article>
+<nav>I am nav, and help guide the page</nav>
+<footer><small>&copy;I am a footer, the end.</small></footer>
+
+<p>You can use nav href "#" to link an element on the same page. <-- --> with ! after the first arrow head to comment. You can use Landmark to help a user navigate the page easier and jump to content. An aria-labelshows what a user will click to. A skip link helps provide a link to a section in your web page. </p> <role="paragraph"></role>
+
+<h1>CSS</h1>
+
+<p>CSS helps make a page look pretty. First you have the HTML, sometimes involving things like text emphasis, but is considered the content core of the page.</p>
+
+<p>Font-family can change things like serifs in text.
+  Font-size helps with sizing, rem and points are used.
+  Font-weight controls the boldness and stregth.
+  Font-style makes text stylized like normal, oblique etc.
+  Line-height sets the height of a line box.
+  Finally, font shorthand allows you to use font related properties, more than one, in one CSS style rule.
+</p>
+
+<p>Text-transform allows you to make changes to the text such as uppercase. Text-decoration adds colours and underlines, things that make the text pretty. Text-align helps move the text to be in line, such as right, left, center. Text-indent adds the indent with values, ex 50px. Finally, text-sahdow adds shadow to text by value and colour ex. 2px red.</p>
+
+<p>There are different states for links on a page, and can be edited by text-decorations too. a:link is normal, a:visited is when you already went there, a:hover is when the cursor is over the link, and a:active is when clicked. This can be useful to the user by showing a difference, what they haven't seen etc. As well as help with accessibility.</p>
+
+
+<p>You can add certain fonts needed if you embed them in the head of your HTML, Google fonts is useful and can easily be copy and pasted with formatting from the website.</p>
+
+<p>Things like margin and padding help with text content too. Margins help with creating space around elements. While padding is for space around the elements content.
+  ex. padding-left: 10px
+</p>
+
+</main>
+
+<!--
+  Accessibility example
+
+  <main role="main" id="main">
+  <section id="music">
+    <h2>Music</h2>
+    
+    <article>
+      <h3>Alex Cuba at NAC’s Babs Asper Theatre 02.04.2023</h3>
+      <img src="https://assets.codepen.io/9341906/alex-cuba.jpeg" alt="" />
+      <p>For those wanting to go south but unwilling to risk the travel headache, an upcoming concert by recent Grammy-award winner Alex Cuba may be just the thing.</p>
+      <a href="alex-cuba-nac.html" aria-label="read more about Alex Cuba show at Babs theatre">Read more</a>
+    </article>
+  
+  -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Design 1 Reference Site</title>
-</head>
+
+ <header><h1><title>Notes: Reference site</title></h1>
+</head></header>
 <body>
-  <h1>Hypertext markup language</h1>
-   Create a paragraph using <p></p>
+  <h1>Notes:</h1>
+  <h3>Hypertext markup language aka HTML</h3>
+   Create a paragraph using p tags<p></p>
    Headings go from 1 to 6, in an order from most to least importance
    <h1>Most important</h1><h2></h2><h3></h3><h4></h4><h5></h5><h6>Least important</h6>
    Lists are often used and come in different forms
@@ -198,6 +306,62 @@ Skip links
 
 <nav role=“navigation” id=“nav”></nav>
 <nav role=“main” id=“main></main>
+
+
+
+<h2>CSS</h2>
+
+Cascading Style Sheets stylesheet language used to describe the presentation of web pages
+
+
+CSS is the language we use to control the appearance of our HTML pages.
+HTML- content
+CSS- looks
+JAVA- behaviour
+
+A CSS can be created in a code editor and saved with the extension .css.
+
+
+We need to link the CSS file to the HTML so that the browser knows where to look for the CSS file.
+Attach the CSS file within the <head> of the HTML document using the <link> element.
+
+<link rel=“stylesheet” href=“css/style.css”>
+
+The link element is used to attach CSS to the HTML file must have the following two attributes:
+
+HREF- this attribute is used to point to the location of the CSS file must point into the correct folder.
+REL- this attribute is used to define this item as a stylesheet
+
+Syntax of CSS- A CSS rule consists of a selector and a declaration block where properties are styled
+
+h1{color:black;}
+
+Rule set- composed of a selector and one or many declarations surrounded by curly braces
+
+Selector: identifies which HTML element should be targeted for styling
+
+Declaration- assigns a value to a property, separated by a colon. Each declaration must end with a semi-colon
+
+Property- the type of design you want to add. Ex. Width, colour, border, etc.
+
+Value- accepted value for property. Ex. 30px, blue, etc.
+
+Targeting HTML-
+To style something in CSS you first need to target the element then apply design styles.
+
+
+Web Design is 95% Typography
+
+-Looser line-height than print. Normal range for web would be between 1.3 - 1.5
+-Similar line-length to print. Max 80 characters.
+-Lots of breaks: headings, lists, highlights, etc
+-Breathing room with whitespace
+-Color contrast between text and background
+
+LVHFA
+
+Goes somewhere; link
+Does something; button
 
 
 </body>
